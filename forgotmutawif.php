@@ -1,0 +1,46 @@
+<?php require_once "functions.php"; ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forgot Password</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 offset-md-4 form">
+                <form action="" method="POST" autocomplete="">
+                    <h2 class="text-center">Forgot Password Mutawif!!</h2>
+                    <p class="text-center">To change the Password </p>
+                    <?php
+                        if(count($errors) > 0){
+                            ?>
+                            <div class="alert alert-danger text-center">
+                                <?php 
+                                    foreach($errors as $error){
+                                        echo $error;
+                                    }
+                                ?>
+                            </div>
+                            <?php
+                        }
+                    ?>
+
+                   
+                    <div class="form-group">
+                        <input class="form-control" type="email" name="email" placeholder="Enter email address" required value="<?php echo $email ?>">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="password" name="password" placeholder="Enter password" required value="">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control button" type="submit" name="check-emailmutaw" value="Continue">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
